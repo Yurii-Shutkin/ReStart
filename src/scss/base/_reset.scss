@@ -1,0 +1,151 @@
+// Modern SCSS reset + sensible defaults
+// Place this file as a partial and import it at the top of your main stylesheet.
+// Designed to be small, accessible and composable.
+
+// 1. Box sizing and core defaults
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html {
+  -webkit-text-size-adjust: 100%; // prevent font scaling in landscape
+  -ms-text-size-adjust: 100%;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  line-height: 1.15;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: #fff;
+  color: #111;
+  font-family: inherit;
+  -webkit-font-smoothing: antialiased;
+}
+
+// 2. Remove default spacing for common elements
+h1, h2, h3, h4, h5, h6,
+p, figure, blockquote, dl, dd {
+  margin: 0;
+}
+
+ul[role='list'], ol[role='list'], ul, ol {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+// 3. Media elements
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+// 4. Links and interactive elements
+a {
+  color: inherit;
+  text-decoration: none;
+  background-color: transparent;
+}
+
+button, input, select, textarea {
+  font: inherit;
+  color: inherit;
+}
+
+button {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+}
+
+// keep focus visible for keyboard users, hide for mouse where appropriate
+:where(:focus) {
+  outline: none;
+}
+
+:where(:focus-visible) {
+  outline: 3px solid rgba(21,156,228,0.6);
+  outline-offset: 2px;
+}
+
+// 5. Forms: sensible defaults
+input[type='search']::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+textarea {
+  resize: vertical;
+}
+
+// Remove built-in number input arrows where appropriate
+input[type='number'] {
+  -moz-appearance: textfield;
+}
+input[type='number']::-webkit-outer-spin-button,
+input[type='number']::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+// 6. Tables
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+// 7. Accessibility helpers
+// Use the class `.visually-hidden` to hide content visually but keep it accessible to screen readers.
+%visually-hidden {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  padding: 0 !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  clip: rect(0 0 0 0) !important;
+  white-space: nowrap !important;
+  border: 0 !important;
+}
+
+// Provide a class option as well (uncomment if you prefer class-based usage)
+/*
+.visually-hidden {
+  @extend %visually-hidden;
+}
+*/
+
+// 8. Reduced motion
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+// 9. Small utilities (optional)
+// Use `:where()` to keep specificity low so overrides are easy.
+
+:where(img[alt='']) {
+  // decorative images without alt text: ignore from assistive tech
+  aria-hidden: true;
+}
+
+// Hide elements using HTML5 hidden attribute
+[hidden] {
+  display: none !important;
+}
+
+// 10. Code blocks
+code, kbd, samp, pre {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, 'Roboto Mono', 'Courier New', monospace;
+  font-size: 0.95em;
+}
+
+// End of reset

@@ -1,0 +1,58 @@
+@use 'sass:map';
+@use './base/reset' as *;
+@use './base/_vars.scss' as vars;
+@use './mixins/container-width.scss' as *;
+@use './mixins/respond-to.scss' as *;
+@use './layuot/header.scss' as *;
+@use './layuot/nav.scss' as *;
+@use './layuot/footer.scss' as *;
+
+
+
+body {
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    background-color: #f9f9f9;
+}
+
+.container {
+    margin: 0 auto;
+    width: 100%;
+    padding: 0 30px;
+    box-sizing: border-box;
+
+    @include container-width(100%);
+
+    @include respond-to(desktop) {
+        @include container-width(map.get(vars.$breakpoints, laptop-l))
+    }
+
+    @include respond-to(laptop-m) {
+        @include container-width(map.get(vars.$breakpoints, laptop-m))
+    }
+
+    @include respond-to(laptop) {
+        @include container-width(map.get(vars.$breakpoints, laptop))
+    }
+
+    @include respond-to(tablet-l) {
+        @include container-width(map.get(vars.$breakpoints, tablet-l))
+    }
+
+    @include respond-to(tablet) {
+        @include container-width(map.get(vars.$breakpoints, tablet))
+    }
+
+    @include respond-to(mobile) {
+        @include container-width(map.get(vars.$breakpoints, mobile))
+    }
+
+    @include respond-to(mobile-m) {
+        @include container-width(map.get(vars.$breakpoints, mobile-m))
+    }
+
+    @include respond-to(mobile-s) {
+        @include container-width(map.get(vars.$breakpoints, mobile-s))
+    }
+}

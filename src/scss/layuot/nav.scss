@@ -1,0 +1,54 @@
+@use 'sass:map';
+@use './base/_vars.scss' as vars;
+@use './mixins/respond-to.scss' as *;
+
+.nav {
+    position: relative;
+    font-size: 16px;
+    width: 100%;
+    max-width: 1361px;
+    margin: 0 auto;
+    border: 1px solid #e2e2e2;
+    border-radius: 5px;
+    top: -37px;
+
+    &__list {
+        display: flex;
+
+        @include respond-to(laptop-m) {
+                
+        }
+    }
+
+    &__item {
+        width: 272px;
+        padding: 15px 0;
+        text-align: center;
+
+        &:last-child {
+                .nav__link {
+                    border: none;
+                }
+        }
+
+    }
+
+    &__link { 
+        display: block;
+        padding: 15px 0;
+        width: 100%;
+        border-right: 1px solid #e2e2e2;
+
+        @include respond-to(laptop-m) {
+            font-size: 15px;      
+        }
+    }
+
+    @include respond-to(laptop-l) {
+        max-width: 100%;
+    }
+
+    @include respond-to(laptop) {
+        display: none;
+    }
+}

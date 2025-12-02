@@ -1,0 +1,21 @@
+@use 'sass:map';
+@use './base/_vars.scss' as vars;
+@use './mixins/respond-to.scss' as *;
+
+.footer {
+
+    .nav {
+        margin-bottom: 29px;
+        top: 0;
+    }
+
+    &__text {
+        font-size: 14px;
+        color: #999;
+        font-weight: 400;
+    }
+
+    &__copy {
+        text-align: right;
+    }
+}

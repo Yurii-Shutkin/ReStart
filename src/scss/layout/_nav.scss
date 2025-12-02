@@ -1,6 +1,6 @@
 @use 'sass:map';
-@use './base/_vars.scss' as vars;
-@use './mixins/respond-to.scss' as *;
+@use '../base';
+@use '../mixins';
 
 .nav {
     position: relative;
@@ -8,14 +8,16 @@
     width: 100%;
     max-width: 1361px;
     margin: 0 auto;
+    background-color: #fff;
     border: 1px solid #e2e2e2;
     border-radius: 5px;
     top: -37px;
+    z-index: 1;
 
     &__list {
         display: flex;
 
-        @include respond-to(laptop-m) {
+        @include mixins.respond-to(laptop-m) {
                 
         }
     }
@@ -39,16 +41,16 @@
         width: 100%;
         border-right: 1px solid #e2e2e2;
 
-        @include respond-to(laptop-m) {
+        @include mixins.respond-to(laptop-m) {
             font-size: 15px;      
         }
     }
 
-    @include respond-to(laptop-l) {
+    @include mixins.respond-to(laptop-l) {
         max-width: 100%;
     }
 
-    @include respond-to(laptop) {
+    @include mixins.respond-to(laptop) {
         display: none;
     }
 }

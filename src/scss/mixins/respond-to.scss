@@ -1,5 +1,5 @@
 @use 'sass:map';
-@use '../base/_vars.scss' as vars;
+@use '../base/vars';
 
 @mixin respond-to($breakpoint) {
     $breakpoint-value: map.get(vars.$breakpoints, $breakpoint);

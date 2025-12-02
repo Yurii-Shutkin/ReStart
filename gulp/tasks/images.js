@@ -11,17 +11,22 @@ import config from '../config.js';
 
 const imageOptim = () => {
     return src(`${config.src.assets.images}/**/*.{png,jpg,jpeg}`, {encoding: false})
-    .pipe(imagemin([
-        imageminMozjpeg({quality: 75, progressive: true}),
-        imageminOptipng({optimizationLevel: 5}),
-    ]))
-
+    // .pipe(imagemin([
+    //     imageminMozjpeg({quality: 75, progressive: true}),
+    //     imageminOptipng({optimizationLevel: 5}),
+    // ]))
     .pipe(dest(config.build.images))
     .pipe(browserSync.stream());
 }
 
+const iconOptim = () => {
+    return src(`${config.src.assets.icons}/**/*.svg`, {encoding: false})
+    .pipe(dest(config.build.icons))
+    .pipe(browserSync.stream());
+}
+
 const toAvif = () => {
-    return src(`${config.src.assets.images}/**/*.{png,jpg,jpeg}0`, {encoding: false})
+    return src(`${config.src.assets.images}/**/*.{png,jpg,jpeg}`, {encoding: false})
     .pipe(avif({ quality: 75 }))
     .pipe(dest(config.build.images))
     .pipe(browserSync.stream());
@@ -34,9 +39,9 @@ const toWebp = () => {
     .pipe(browserSync.stream());
 }
 
-export const imageBuild = series(imageOptim, toAvif, toWebp);
+export const imageBuild = series(imageOptim, iconOptim, toAvif, toWebp);
 
 
 export const imageWatch = () => {
-    watch(`${config.src.assets.images}/**/*.{png,jpg,jpeg}`, imageBuild)
+    watch(`${config.src.assets}/**/*`, imageBuild)
 }

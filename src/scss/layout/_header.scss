@@ -1,6 +1,6 @@
 @use 'sass:map';
 @use '../base/vars' as *;
-@use './mixins/respond-to.scss' as *;
+@use '../mixins' as *;
 
 .header {
     max-width: 1440px;
@@ -8,14 +8,11 @@
     margin: 0 auto;
 
     &__logo {
+        width: 184px;
         margin-right: 30px;   
 
         @include respond-to(tablet-l) {
             margin-right: 0;
-        }  
-
-         @include respond-to(tablet) {
-            max-width: 120px;
         }  
     }
 
@@ -30,17 +27,30 @@
             justify-content: space-between;
             align-items: center;
         }  
+
+        @include respond-to(tablet-l) {
+            margin-bottom: 33px;
+        }  
+
+        @include respond-to(mobile) {
+            margin-bottom: 17px;
+        }  
     }
 
     &__msg {
-
-        @include respond-to(tablet-l) {
-            display: block;
-            text-wrap: nowrap;
-        }
-
          @include respond-to(tablet) {
             display: none;
+        }
+
+        &--mobile {
+            display: none;
+
+            @include respond-to(tablet) {
+                display: block;
+                text-align: center;
+                margin-bottom: 21px;
+            }
+
         }
 
     }
@@ -82,9 +92,15 @@
         position: relative;
         width: 40px;
         height: 4px;
+        top: -5px;
         background: map.get($colors, black);
         border-radius: 5px;
         transition: transform .3s ease;
+
+        @include respond-to(tablet) {
+            width: 31px;
+            top: -8px
+        }  
 
         &-menu {
             display: none;   

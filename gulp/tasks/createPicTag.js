@@ -9,7 +9,7 @@ export const createPicTag = () => {
     .pipe(picture(
         {
             extensions : ['.jpg', '.png', '.jpeg'], 
-            source : ['.webp'],    
+            source : ['.webp', '.avif'],    
         }
     ))
     .pipe(dest(`${config.build.root}`))

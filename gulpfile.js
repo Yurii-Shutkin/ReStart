@@ -11,11 +11,11 @@ import clear from './gulp/tasks/clear.js';
 
 export const build = series(
     clear,
-    htmlBuild,
-    scssBuild,
     imageBuild,
-    jsBuild,
+    htmlBuild,
     createPicTag,
+    scssBuild,
+    jsBuild,
 )
 
 export const watch = series(

@@ -27,6 +27,7 @@ const config = {
         css: `${buildPath}/css`,
         js: `${buildPath}/js`,
         images: `${buildPath}/images`,
+        icons: `${buildPath}/images/icons`,
         fonts: `${buildPath}/fonts`,
     }
 }

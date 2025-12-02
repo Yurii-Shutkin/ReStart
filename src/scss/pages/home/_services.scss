@@ -1,0 +1,141 @@
+@use 'sass:map';
+@use '../../mixins/index' as *;
+@use '../../base/vars' as *;
+
+.services {
+    text-align: center;
+
+    &__logo {
+        max-width: fit-content;
+        margin: 0 auto 28px;
+
+        @include respond-to(tablet-l) {
+            margin: 0 auto 12px;
+        }
+
+        @include respond-to(mobile) {
+            margin: 0 auto 18px;
+        }
+    }
+
+    &__title {
+        margin-bottom: 29px;
+
+        @include respond-to(tablet-l) {
+            font-size: 16px;
+            margin-bottom: 22px;
+        }
+
+        @include respond-to(mobile) {
+                font-size: 16px;
+                line-height: 1.4;
+                margin-bottom: 21px;
+            }
+    }
+
+    &__wrap {
+        display: flex;
+        justify-content: space-around;
+        gap: 10px;
+
+        @include respond-to(tablet-l) {
+            justify-content: center;
+            padding: 0 15px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            column-gap: 25px;
+            grid-row-gap: 27px;
+            margin-bottom: 24px;
+        }
+
+        @include respond-to(mobile) {
+            margin-bottom: 37px;
+            grid-template-columns: none;
+            grid-row: none;
+            padding: 0;
+        }
+    }
+
+    &__item {
+        box-shadow: 0px 4px 4px 0px #0000000D;
+        border-radius: 5px;
+        margin-bottom: 48px;
+        overflow: hidden;
+        padding-bottom: 44px;
+
+        @include respond-to(tablet-l) {
+            max-width: 327px;
+            padding-bottom: 23px;
+            margin: 0 auto;  
+        }
+
+        @include respond-to(mobile) {
+            padding-bottom: 16px;
+            margin-bottom: 0px;
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+
+    &__img {
+        margin-bottom: 28px;
+
+        @include respond-to(tablet-l) {
+            margin-bottom: 12px;
+        }
+
+        @include respond-to(mobile) {
+            margin-bottom: 9px;
+        }
+    }
+
+    &__sub-title {
+        display: block;
+        border-bottom: 1px solid #e2e2e2;
+        padding-bottom: 20px;
+        max-width: 355px;
+        margin: 0 auto 30px;
+
+        @include respond-to(tablet-l) {
+            padding-bottom: 14px;
+            max-width: 283px;
+            margin-bottom: 20px;
+        }
+
+        @include respond-to(mobile) {
+            padding-bottom: 10px;
+            margin: 0 auto 15px;
+            max-width: 250px;
+        }
+    }
+
+    &__sub-desc {
+        display: block;
+        color: map.get($colors, grey);
+        margin: 0 auto;
+        max-width: 210px;
+        line-height: 1.3;
+    }
+
+    &__desc {
+        display: block;
+        max-width: 810px;
+        margin: 0 auto 68px;
+        line-height: 1.4;
+        color: map.get($colors, black);
+
+        @include respond-to(tablet-l) {
+            margin-bottom: 30px;
+            line-height: 1.48;
+
+        }
+
+        @include respond-to(mobile) {
+            line-height: 1.48;
+            max-width: 260px;
+            margin-bottom: 28px;
+        }
+    }
+}

@@ -6,7 +6,7 @@ import browserSync from 'browser-sync';
 import config from '../config.js';
 
 export const htmlBuild = () => {
-    return src(`${config.src.html}/pages/index.html`)
+    return src(`${config.src.html}/index.html`)
     .pipe(include({
       prefix: '@@',
       basepath: '@file'

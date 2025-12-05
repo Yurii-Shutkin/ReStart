@@ -31,8 +31,10 @@
     "gulp": "^5.0.1",
     "gulp-avif": "^1.1.1",
     "gulp-clean": "^0.4.0",
+    "gulp-clone": "^2.0.1",
     "gulp-debug": "^5.0.1",
     "gulp-file-include": "^2.3.0",
+    "gulp-flatten": "^0.4.0",
     "gulp-htmlmin": "^5.0.1",
     "gulp-imagemin": "^9.2.0",
     "gulp-picture-html": "^1.0.8",
@@ -44,6 +46,7 @@
     "gulp-webp": "^5.1.0",
     "imagemin-mozjpeg": "^10.0.0",
     "imagemin-optipng": "^8.0.0",
+    "merge-stream": "^2.0.0",
     "sass": "^1.94.2",
     "webpack": "^5.103.0",
     "webpack-stream": "^7.0.0"

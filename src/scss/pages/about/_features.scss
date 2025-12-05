@@ -1,0 +1,63 @@
+@use '../../mixins/' as *;
+
+.features {
+    background-color: #F8F9FA;
+    margin-bottom: 41px;
+
+    @include respond-to (tablet-l) {
+            margin-bottom: 38px;
+        }
+
+    @include respond-to (tablet) {
+            margin-bottom: 45px;
+        }
+
+    &__wrap {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        padding: 7px 11px;
+        row-gap: 52px;
+
+        @include respond-to (tablet-l) {
+            padding: 0;
+            row-gap: 33px;
+        }
+
+        @include respond-to (tablet) {
+            grid-template-columns: 1fr;
+            padding-right: 19px;
+            row-gap: 34px;
+        }
+    }
+
+    &__item {
+        display: flex;
+
+        @include respond-to (tablet-l) {
+            max-width: 310px;
+        }
+
+        @include respond-to (tablet) {
+            display: block;
+        }
+
+        img {
+            width: 24px;
+            height: 24px;
+            margin-right: 24px;
+
+            @include respond-to (tablet-l) {
+                margin-right: 14px;
+            }
+
+            @include respond-to (tablet-l) {
+                margin-bottom: 6px;
+            }
+        }
+
+        span {
+            max-width: 532px;
+            line-height: 1.5;
+        }
+    }
+}

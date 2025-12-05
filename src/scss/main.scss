@@ -5,17 +5,20 @@
 
 @use 'layout';
 @use 'pages';
+@use './components/btn.scss';
 
 body {
     font-family: 'Roboto', sans-serif;
     font-size: 16px;
     font-weight: 400;
-    background-color: #f9f9f9;
+    background-color: #fff;
+    color: map.get(vars.$colors, grey);
 }
 
 h2, h3 {
     font-size: 20px;
     font-weight: 400;
+    color: map.get(vars.$colors, black);
 }
 
 .container {

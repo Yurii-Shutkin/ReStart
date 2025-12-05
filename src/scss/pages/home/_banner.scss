@@ -101,27 +101,27 @@
                 }
             }
 
-            &__link {
-                padding: 18px 36px;
-                border: 1px solid #cecece;
-                border-radius: 100px;
-                text-align: center;
-                cursor: pointer;
+            // &__link {
+            //     padding: 18px 36px;
+            //     border: 1px solid #cecece;
+            //     border-radius: 100px;
+            //     text-align: center;
+            //     cursor: pointer;
 
-                &:hover {
-                    background-color: map.get($colors, black);
-                    color: #fff;
-                }
+            //     &:hover {
+            //         background-color: map.get($colors, black);
+            //         color: #fff;
+            //     }
 
-                &:active {
-                    border: 3px solid #cecece;
-                    padding: 13px 36px;
-                }
+            //     &:active {
+            //         border: 3px solid #cecece;
+            //         padding: 13px 36px;
+            //     }
 
-                @include respond-to(mobile) {
-                    padding: 16px 30px;
-                }
-            }
+            //     @include respond-to(mobile) {
+            //         padding: 16px 30px;
+            //     }
+            // }
         }
     }
 }

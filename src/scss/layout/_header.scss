@@ -3,10 +3,9 @@
 @use '../mixins' as *;
 
 .header {
-    max-width: 1440px;
     padding-top: 23px;
     margin: 0 auto;
-
+    background-color: #F8F9FA;
     &__logo {
         width: 184px;
         margin-right: 30px;   

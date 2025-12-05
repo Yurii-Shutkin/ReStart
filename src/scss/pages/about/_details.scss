@@ -1,0 +1,87 @@
+@use 'sass:map';
+@use '../../base/vars' as *;
+@use '../../mixins' as *;
+
+.details {
+    background-color: #F8F9FA;
+    margin-bottom: 55px;
+
+    @include respond-to (tablet-l) {  
+            margin-bottom: 20px;
+        }
+
+    @include respond-to (tablet) {
+        margin-bottom: 27px;
+    }
+
+    &__wrap {
+        max-width: 1354px;
+        margin: 0 auto;
+        background-color: #fff;
+        background-image: url('../images/about_handshake.png');
+        background-repeat: no-repeat;
+        padding: 30px;
+        border: 1px solid #e6e6e6;
+        border-radius: 5px;
+
+        img {
+            display: none;
+
+            @include respond-to (tablet-l) {
+                display: block;   
+                margin-bottom: 27px;
+            }
+
+            @include respond-to (tablet) {
+                margin-bottom: 16px;
+            }
+        }
+
+        @include respond-to (laptop) {
+            background-image: none;  
+            }
+
+        @include respond-to (tablet-l) {
+            padding: 0 0 36px 0;
+        }
+    }
+
+    &__desc {
+        max-width: 807px;
+        margin-left: auto;
+        margin-bottom: 17px;
+        line-height: 1.5;
+
+        @include respond-to (laptop-l) {
+            -webkit-text-stroke: 0.1px #000;
+        }
+
+        @include respond-to (tablet-l) {
+            margin-left: 15px;
+            margin-bottom: 26px;
+        }
+
+        @include respond-to (tablet) {
+                margin-left: 13px;
+                padding-right: 11px;
+            }
+    }
+
+    &__btn {
+        display: block;
+        margin: 0 auto;
+        min-width: 230px;
+        text-wrap: nowrap;
+        // text-align: center;
+
+        @include respond-to (tablet-l) {
+            background-image: none;
+            margin: 0 auto 0 0;
+            margin-left: 15px;
+        }
+
+        @include respond-to (tablet) {
+                margin: 0 auto  ;
+            }
+    }
+}

@@ -1,64 +1,66 @@
-@use 'sass:map';
-@use 'base/reset' as *;
-@use 'base/vars' as vars;
-@use 'mixins';
+@use "sass:map";
+@use "base/reset" as *;
+@use "base/vars" as vars;
+@use "mixins";
 
-@use 'layout';
-@use 'pages';
-@use './components/btn.scss';
+@use "layout";
+@use "pages";
+@use "./components/btn.scss";
 
 body {
-    font-family: 'Roboto', sans-serif;
-    font-size: 16px;
-    font-weight: 400;
-    background-color: #fff;
-    color: map.get(vars.$colors, grey);
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  background-color: #fff;
+  color: map.get(vars.$colors, grey);
 }
 
-h2, h3 {
-    font-size: 20px;
-    font-weight: 400;
-    color: map.get(vars.$colors, black);
+h2,
+h3 {
+  font-size: 20px;
+  font-weight: 400;
+  color: map.get(vars.$colors, black);
 }
 
 .container {
-    margin: 0 auto;
-    width: 100%;
+  margin: 0 auto;
+  width: 100%;
+  padding: 0 40px;
+  box-sizing: border-box;
+
+  @include mixins.container-width(100%);
+
+  @include mixins.respond-to(desktop) {
+    @include mixins.container-width(map.get(vars.$breakpoints, laptop-l));
+  }
+
+  @include mixins.respond-to(laptop-m) {
+    @include mixins.container-width(map.get(vars.$breakpoints, laptop-m));
+  }
+
+  @include mixins.respond-to(laptop) {
+    @include mixins.container-width(map.get(vars.$breakpoints, laptop));
+  }
+
+  @include mixins.respond-to(tablet-l) {
+    @include mixins.container-width(map.get(vars.$breakpoints, tablet-l));
     padding: 0 30px;
-    box-sizing: border-box;
+  }
 
-    @include mixins.container-width(100%);
+  @include mixins.respond-to(tablet) {
+    @include mixins.container-width(map.get(vars.$breakpoints, tablet));
+    padding: 0 15px;
+  }
 
-    @include mixins.respond-to(desktop) {
-        @include mixins.container-width(map.get(vars.$breakpoints, laptop-l))
-    }
+  @include mixins.respond-to(mobile) {
+    @include mixins.container-width(map.get(vars.$breakpoints, mobile));
+  }
 
-    @include mixins.respond-to(laptop-m) {
-        @include mixins.container-width(map.get(vars.$breakpoints, laptop-m))
-    }
+  @include mixins.respond-to(mobile-m) {
+    @include mixins.container-width(map.get(vars.$breakpoints, mobile-m));
+  }
 
-    @include mixins.respond-to(laptop) {
-        @include mixins.container-width(map.get(vars.$breakpoints, laptop));
-        padding: 0 15px;
-    }
-
-    @include mixins.respond-to(tablet-l) {
-        @include mixins.container-width(map.get(vars.$breakpoints, tablet-l))
-    }
-
-    @include mixins.respond-to(tablet) {
-        @include mixins.container-width(map.get(vars.$breakpoints, tablet))
-    }
-
-    @include mixins.respond-to(mobile) {
-        @include mixins.container-width(map.get(vars.$breakpoints, mobile));
-    }
-
-    @include mixins.respond-to(mobile-m) {
-        @include mixins.container-width(map.get(vars.$breakpoints, mobile-m))
-    }
-
-    @include mixins.respond-to(mobile-s) {
-        @include mixins.container-width(map.get(vars.$breakpoints, mobile-s))
-    }
+  @include mixins.respond-to(mobile-s) {
+    @include mixins.container-width(map.get(vars.$breakpoints, mobile-s));
+  }
 }

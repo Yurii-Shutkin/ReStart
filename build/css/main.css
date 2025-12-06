@@ -994,14 +994,21 @@ code, kbd, samp, pre {
 .services {
   padding-top: 19px;
   padding-bottom: 45px;
+  margin-bottom: 76px;
+}
+@media (max-width: 768px) {
+  .services {
+    margin-bottom: 73px;
+  }
 }
 @media (max-width: 576px) {
   .services {
     padding-top: 14px;
+    margin-bottom: 40px;
   }
 }
 .services a {
-  color: #337AB7;
+  color: #337ab7;
 }
 .services__title {
   margin-bottom: 35px;
@@ -1113,7 +1120,138 @@ code, kbd, samp, pre {
   }
 }
 
+.location__title {
+  margin-bottom: 33px;
+}
+@media (max-width: 768px) {
+  .location__title {
+    margin-bottom: 30px;
+  }
+}
+@media (max-width: 425px) {
+  .location__title {
+    text-align: center;
+    margin-bottom: 40px;
+  }
+}
+.location .cities {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+@media (max-width: 1440px) {
+  .location .cities {
+    flex-wrap: wrap;
+  }
+}
+@media (max-width: 768px) {
+  .location .cities {
+    gap: 56px;
+  }
+}
+@media (max-width: 425px) {
+  .location .cities {
+    gap: 48px;
+  }
+}
+.location .cities__item {
+  width: 100%;
+  max-width: 660px;
+}
+@media (max-width: 1440px) {
+  .location .cities__item {
+    max-width: 100%;
+  }
+}
+.location .cities__title {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+.location .cities__title img {
+  margin-right: 7px;
+}
+@media (max-width: 425px) {
+  .location .cities__title {
+    margin-bottom: 12px;
+  }
+}
+.location .cities .adress {
+  background-color: #fff;
+  border: 1px solid #e6e6e6;
+  border-radius: 5px;
+  font-size: 18px;
+}
+.location .cities .adress__wrap {
+  color: #333;
+}
+@media (max-width: 768px) {
+  .location .cities .adress__wrap {
+    max-width: 100%;
+    width: 430px;
+  }
+}
+@media (max-width: 425px) {
+  .location .cities .adress__wrap {
+    margin-bottom: 20px;
+  }
+}
+.location .cities .adress__item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 27px 26px 22px 17px;
+  border-bottom: 1px solid #ebebeb;
+}
+.location .cities .adress__item:last-child {
+  border: none;
+}
+@media (max-width: 768px) {
+  .location .cities .adress__item {
+    padding: 27px 30px 22px 17px;
+    flex-wrap: wrap;
+  }
+}
+@media (max-width: 425px) {
+  .location .cities .adress__item {
+    padding: 22px 12px;
+  }
+}
+.location .cities .adress__street {
+  border-right: 2px solid #c4c4c4;
+  margin-right: 10px;
+}
+@media (max-width: 425px) {
+  .location .cities .adress__street {
+    padding-right: 7px;
+  }
+}
+.location .cities .adress__desc {
+  font-size: 14px;
+  color: #666;
+}
+@media (max-width: 425px) {
+  .location .cities .adress__desc {
+    margin-top: 3px;
+  }
+}
+.location .cities .adress__btn {
+  padding: 16px 23px;
+  color: #333;
+}
+@media (max-width: 768px) {
+  .location .cities .adress__btn {
+    padding: 16px 28px;
+  }
+}
+@media (max-width: 425px) {
+  .location .cities .adress__btn {
+    font-size: 16px;
+  }
+}
+
 .btn {
+  display: block;
   padding: 16px 0;
   border: 1px solid #cecece;
   border-radius: 100px;
@@ -1121,6 +1259,7 @@ code, kbd, samp, pre {
   max-width: fit-content;
   line-height: 1;
   cursor: pointer;
+  text-wrap: nowrap;
 }
 .btn:hover {
   background-color: #333;
@@ -1144,7 +1283,8 @@ body {
   color: #666;
 }
 
-h2, h3 {
+h2,
+h3 {
   font-size: 20px;
   font-weight: 400;
   color: #333;
@@ -1153,7 +1293,7 @@ h2, h3 {
 .container {
   margin: 0 auto;
   width: 100%;
-  padding: 0 30px;
+  padding: 0 40px;
   box-sizing: border-box;
   max-width: 100%;
 }
@@ -1170,17 +1310,18 @@ h2, h3 {
 @media (max-width: 992px) {
   .container {
     max-width: 992px;
-    padding: 0 15px;
   }
 }
 @media (max-width: 768px) {
   .container {
     max-width: 768px;
+    padding: 0 30px;
   }
 }
 @media (max-width: 576px) {
   .container {
     max-width: 576px;
+    padding: 0 15px;
   }
 }
 @media (max-width: 425px) {

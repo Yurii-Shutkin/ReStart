@@ -1,121 +1,127 @@
-@use 'sass:map';
-@use '../../base/vars' as *;
-@use '../../mixins' as *;
+@use "sass:map";
+@use "../../base/vars" as *;
+@use "../../mixins" as *;
 
 .services {
-    padding-top: 19px;
-    padding-bottom: 45px;
+  padding-top: 19px;
+  padding-bottom: 45px;
+  margin-bottom: 76px;
+
+  @include respond-to(tablet-l) {
+    margin-bottom: 73px;
+  }
+
+  @include respond-to(tablet) {
+    padding-top: 14px;
+    margin-bottom: 40px;
+  }
+
+  a {
+    color: #337ab7;
+  }
+
+  &__title {
+    margin-bottom: 35px;
+    font-size: 20px;
+
+    @include respond-to(laptop) {
+      display: none;
+    }
+  }
+
+  &__cards {
+    display: flex;
+    text-align: center;
+    justify-content: space-between;
+    column-gap: 10px;
+
+    @include respond-to(laptop) {
+      flex-wrap: wrap;
+      margin-top: 12px;
+      row-gap: 62px;
+    }
 
     @include respond-to(tablet) {
-        padding-top: 14px;
-    }
-    
-    a {
-        color: #337AB7;
+      row-gap: 27px;
     }
 
-    &__title {
-        margin-bottom: 35px;
-        font-size: 20px;
+    img {
+      margin-bottom: 31px;
 
-        @include respond-to(laptop) {
-            display: none;
-        }
+      @include respond-to(laptop) {
+        margin-bottom: 10px;
+        height: 204px;
+      }
+
+      @include respond-to(tablet) {
+        height: 175px;
+      }
     }
 
-    &__cards {
-        display: flex;
-        text-align: center;
-        justify-content: space-between;
-        column-gap: 10px;
+    &-item {
+      width: 100%;
+      max-width: 332px;
+      margin: 0 auto;
 
-        @include respond-to(laptop) {
-            flex-wrap: wrap;
-            margin-top: 12px;
-            row-gap: 62px;
-        }
+      @include respond-to(laptop) {
+        max-width: 339px;
+      }
 
-        @include respond-to(tablet) {
-            row-gap: 27px;
-        }
-
-        img {
-            margin-bottom: 31px;
-
-            @include respond-to(laptop) {
-                margin-bottom: 10px;
-                height: 204px;
-            }
-
-            @include respond-to(tablet) {
-                height: 175px;
-            }
-        }
-
-        &-item {
-            width: 100%;
-            max-width: 332px;
-            margin: 0 auto;
-
-            @include respond-to(laptop) {
-                max-width: 339px;
-            }
-
-            @include respond-to(tablet) {
-                max-width: 290px;
-            }
-        }
-
-        &-wrap {
-            border: 1px solid #e6e6e6;
-            border-radius: 5px;
-            padding-bottom: 27px;
-            margin-bottom: 20px;
-
-            @include respond-to(laptop) {
-                margin-bottom: 7px;
-            }
-
-            @include respond-to(tablet) {
-                margin-bottom: 8px;
-                padding-bottom: 19px;
-            }
-        }
-
-        &-title {
-            font-size: 20px;
-            color: map.get($colors, black);
-            border-bottom: 1px solid #e2e2e2;
-            max-width: 268px;
-            margin: 0 auto 26px;
-            padding-bottom: 18px;
-
-            @include respond-to(laptop) {
-                margin-bottom: 22px;
-            }
-
-            @include respond-to(tablet) {
-                width: 235px;
-                padding-bottom: 9px;
-                margin-bottom: 17px;
-            }
-        }
-
-        &-desc {
-            font-size: 16px;
-            color: map.get($colors, grey);
-            max-width: 250px;
-            margin: 0 auto;
-            line-height: 1.375;
-        }
-
-        &-after {
-            padding: 0 20px;
-
-            @include respond-to(laptop) {
-                font-size: 14px;
-                line-height: 1.571;
-            }
-        }
+      @include respond-to(tablet) {
+        max-width: 290px;
+      }
     }
+
+    &-wrap {
+      border: 1px solid #e6e6e6;
+      border-radius: 5px;
+      padding-bottom: 27px;
+      margin-bottom: 20px;
+
+      @include respond-to(laptop) {
+        margin-bottom: 7px;
+      }
+
+      @include respond-to(tablet) {
+        margin-bottom: 8px;
+        padding-bottom: 19px;
+      }
+    }
+
+    &-title {
+      font-size: 20px;
+      color: map.get($colors, black);
+      border-bottom: 1px solid #e2e2e2;
+      max-width: 268px;
+      margin: 0 auto 26px;
+      padding-bottom: 18px;
+
+      @include respond-to(laptop) {
+        margin-bottom: 22px;
+      }
+
+      @include respond-to(tablet) {
+        width: 235px;
+        padding-bottom: 9px;
+        margin-bottom: 17px;
+      }
+    }
+
+    &-desc {
+      font-size: 16px;
+      color: map.get($colors, grey);
+      max-width: 250px;
+      margin: 0 auto;
+      line-height: 1.375;
+    }
+
+    &-after {
+      padding: 0 20px;
+
+      @include respond-to(laptop) {
+        font-size: 14px;
+        line-height: 1.571;
+      }
+    }
+  }
 }

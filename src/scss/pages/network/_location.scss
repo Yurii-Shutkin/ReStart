@@ -3,6 +3,16 @@
 @use "../../mixins" as *;
 
 .location {
+  margin-bottom: 96px;
+
+  @include respond-to(tablet-l) {
+    margin-bottom: 55px;
+  }
+
+  @include respond-to(tablet) {
+    margin-bottom: 56px;
+  }
+
   &__title {
     margin-bottom: 33px;
 

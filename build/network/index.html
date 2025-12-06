@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ReStart</title>
-    <link rel="stylesheet" href="./css/main.min.css">
+    <link rel="stylesheet" href="../../css/main.min.css">
 </head>
 
 <body>
@@ -12,7 +12,7 @@
     <div class="container">
         <div class="header__wrap">
         <div class="header__logo logo">
-            <a href="/"><img src="./images/logo.jpg" alt="logo" class="logo"></a>
+            <a href="/"><img src="../../images/logo.jpg" alt="logo" class="logo"></a>
         </div>
         <div class="header__msg">
             <span>Restart — Ваша зона автокомфорту</span>
@@ -25,10 +25,10 @@
             <nav class="burger__bar">
                 <ul>
                     <li class="burger__bar-item">
-                        <a href="#">Про компанію</a>
+                        <a href="/about">Про компанію</a>
                     </li>
                     <li class="burger__bar-item">
-                        <a href="#">Мережа СТЦ</a>
+                        <a href="/network">Мережа СТЦ</a>
                     </li>
                     <li class="burger__bar-item">
                         <a href="#">Інтернет-магазин</a>
@@ -60,84 +60,75 @@
     </div>
 </header>
 
-    <section class="banner">
-    <div class="banner__cards">
-        <div class="card">
-            <div class="card__wrap">
-                <div class="card__icon">
-                    <img src="./images/icons/main_icon-1.svg" alt="icon-1" data-skip-image-optimization>
-                    <span>Діагностика та ремонт стартерів, генераторів, кондиціонерів</span>
-                </div>
+    <div class="container">
+        <section class="services">
+    <h2 class="services__title">
+        Мережа СЦТ Restart (Рестарт) надає наступні послуги
+    </h2>
+    <div class="services__cards">
+        <div class="services__cards-item">
+            <div class="services__cards-wrap">
+                <img src="../images/starters.png" alt="starters">
+            <p class="services__cards-title">
+                Стартери
+            </p>
+            <div class="services__cards-desc">
+                Діагностика, ремонт,
+заміна, продаж. <a href="/">Усі послуги</a>
             </div>
-            <div class="card__link btn">
-                <a href="#">Мережа сервісів</a>
+            </div>
+            <div class="services__cards-after">
+                Підібрати генератор, деталі генератора
+    можна в <a href="#">інтернет-магазині</a>
             </div>
         </div>
-        <div class="card">
-            <div class="card__wrap">
-                <div class="card__icon">
-                    <img src="./images/icons/main_icon-2.svg" alt="icon-2" data-skip-image-optimization>
-                    <span>Продаж стартерів, генераторів та компонентів</span>
-                </div>
+        <div class="services__cards-item">
+            <div class="services__cards-wrap">
+                <img src="../images/generators.png" alt="starters">
+            <p class="services__cards-title">
+                Генератори
+            </p>
+            <div class="services__cards-desc">
+                Діагностика, ремонт,
+заміна, продаж. <a href="/">Усі послуги</a>
             </div>
-            <div class="card__link btn">
-                <a href="#">Перейти в магазин</a>
+            </div>
+            <div class="services__cards-after">
+                Підібрати генератор, деталі генератора
+    можна в <a href="#">інтернет-магазині</a>
+            </div>
+        </div>
+        <div class="services__cards-item">
+            <div class="services__cards-wrap">
+                <img src="../images/conditions.png" alt="starters">
+            <p class="services__cards-title">
+                Кондиціонери
+            </p>
+            <div class="services__cards-desc">
+                Діагностика, ремонт,
+заправка, дозаправка.<a href="/">Усі послуги</a>
+            </div>
+            </div>
+            <div class="services__cards-after">
+                Підібрати запчастини до системи
+кондиціонування можна в <a href="#">інтернет-магазині</a>
+            </div>
+        </div>
+        <div class="services__cards-item">
+            <div class="services__cards-wrap">
+                <img src="../images/accum.png" alt="starters">
+            <p class="services__cards-title">
+                Акумулятори
+            </p>
+            <div class="services__cards-desc">
+                Діагностика,
+заряд та продаж.
+            </div>
             </div>
         </div>
     </div>
 </section>
-    <div class="container">
-    <section class="services">
-        <div class="services__logo logo">
-                <a href="#"><img src="./images/logo.jpg" alt="logo" class="logo"></a>
-        </div>
-        <h2 class="services__title">Справжні професіонали на ринку стартерів та генераторів</h2   >
-        <div class="services__wrap">
-            <div class="services__item">
-                <div class="services__img">
-                    <img src="./images/main_img_1.png" alt="">
-                </div>
-                <h3 class="services__sub-title">
-                    Мережа СТЦ
-                </h3>
-                <span class="services__sub-desc">
-                    Ремонт стартерів,
-    генераторів, кондиціонері
-                </span>
-            </div>
-            <div class="services__item">
-                <div class="services__img">
-                    <img src="./images/main_img_2.png" alt="">
-                </div>
-                <h3 class="services__sub-title">
-                    Інтернет-магазин
-                </h3>
-                <span class="services__sub-desc">
-                    Понад 15 000 позицій
-    агрегатів та компонентів
-                </span>
-            </div>
-            <div class="services__item">
-                <div class="services__img">
-                    <img src="./images/main_img_3.png" alt="">
-                </div>
-                <h3 class="services__sub-title">
-                    Готові рішення
-                </h3>
-                <span class="services__sub-desc">
-                    Готові рішення
-    в стар-ген сегменті для СТО
-                </span>
-            </div>
-        </div>
-        <div class="services__desc">
-            У нас представлений широкий асортимент запчастин та комплектуючих для вантажних та легкових авто,
-    сільськогосподарських
-    машин, водомоторної техніки, а також мотоциклів та промислового сектору ринку.
-        </div>
-    </section>
-</div>
-    <footer class="footer">
+        <footer class="footer">
     <div class="container">
         
 <nav class="nav">
@@ -161,7 +152,6 @@
     </div>
 </footer>
 
-        
-<script type="module" src="./js/app.min.js"></script>
+    </div>   
 </body>
 </html>

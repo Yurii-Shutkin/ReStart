@@ -38,7 +38,8 @@ h2, h3 {
     }
 
     @include mixins.respond-to(laptop) {
-        @include mixins.container-width(map.get(vars.$breakpoints, laptop))
+        @include mixins.container-width(map.get(vars.$breakpoints, laptop));
+        padding: 0 15px;
     }
 
     @include mixins.respond-to(tablet-l) {
@@ -51,7 +52,6 @@ h2, h3 {
 
     @include mixins.respond-to(mobile) {
         @include mixins.container-width(map.get(vars.$breakpoints, mobile));
-        padding: 0 15px;
     }
 
     @include mixins.respond-to(mobile-m) {

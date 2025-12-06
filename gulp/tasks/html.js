@@ -28,8 +28,64 @@ import config from '../config.js';
 //     .pipe(browserSync.stream())
 // }
 
-export const htmlBuild = () => { 
-  const htmlStream = src([
+// export const htmlBuild = () => { 
+//   const htmlStream = src([
+//     `${config.src.html}/pages/**/*.html`,
+//     `!${config.src.html}/pages/home/index.html`,
+//     `!${config.src.html}/pages/**/blocks/*.html`
+//   ])
+//     .pipe(include({
+//       prefix: '@@',
+//       basepath: '@file'
+//     }))
+
+//     const normalPages = htmlStream
+//       .pipe(clone())
+//       .pipe(dest(config.build.root));
+
+//     const minifiedPages = htmlStream
+//       .pipe(clone())
+//       .pipe(htmlmin({
+//         collapseWhitespace: true,
+//         removeComments: true
+//       }))
+//       .pipe(rename({
+//         suffix: '.min'
+//       }))
+//       .pipe(dest(config.build.root));
+
+//     const indexStream = src(`${config.src.html}/pages/home/index.html`)
+//       .pipe(include({
+//         prefix: '@@',
+//         basepath: '@file'
+//     }))
+//       .pipe(rename(file => {
+//         file.dirname = ''
+//       }));
+
+//     const normal = indexStream
+//     .pipe(clone())
+//     .pipe(dest(config.build.root));
+
+//     const minified = indexStream
+//       .pipe(clone())
+//       .pipe(htmlmin({
+//         collapseWhitespace: true,
+//         removeComments: true
+//       }))
+//       .pipe(rename({
+//         suffix: '.min'
+//       }))
+//       .pipe(dest(config.build.root));
+
+//     return merge(normalPages, minifiedPages, normal, minified)
+//       .pipe(browserSync.stream());
+// };
+
+export const htmlBuild = (cb) => { 
+  
+  // Задача 1: Обработка всех страниц, кроме главной (нормальные и минифицированные)
+  const otherPages = src([
     `${config.src.html}/pages/**/*.html`,
     `!${config.src.html}/pages/home/index.html`,
     `!${config.src.html}/pages/**/blocks/*.html`
@@ -38,50 +94,32 @@ export const htmlBuild = () => {
       prefix: '@@',
       basepath: '@file'
     }))
+    .pipe(dest(config.build.root)) // Создаем нормальные версии
+    .pipe(htmlmin({ collapseWhitespace: true, removeComments: true }))
+    .pipe(rename({ suffix: '.min' }))
+    .pipe(dest(config.build.root)); // Создаем минифицированные версии
 
-  const indexStream = src(`${config.src.html}/pages/home/index.html`)
+  // Задача 2: Обработка index.html
+  const indexPage = src(`${config.src.html}/pages/home/index.html`)
     .pipe(include({
       prefix: '@@',
       basepath: '@file'
     }))
     .pipe(rename(file => {
-      file.dirname = ''
-    }));
+      // Это гарантирует, что файл попадает прямо в корень назначения
+      file.dirname = ''; 
+    }))
+    .pipe(dest(config.build.root)) // Создаем index.html (нормальный)
+    .pipe(htmlmin({ collapseWhitespace: true, removeComments: true }))
+    .pipe(rename({ suffix: '.min' }))
+    .pipe(dest(config.build.root)); // Создаем index.min.html
 
-    const normalPages = htmlStream
-      .pipe(clone())
-      .pipe(dest(config.build.root));
-
-    const minifiedPages = htmlStream
-      .pipe(clone())
-      .pipe(htmlmin({
-        collapseWhitespace: true,
-        removeComments: true
-      }))
-      .pipe(rename({
-        suffix: '.min'
-      }))
-      .pipe(dest(config.build.root));
-
-      const normal = indexStream
-      .pipe(clone())
-      .pipe(dest(config.build.root));
-
-    const minified = indexStream
-      .pipe(clone())
-      .pipe(htmlmin({
-        collapseWhitespace: true,
-        removeComments: true
-      }))
-      .pipe(rename({
-        suffix: '.min'
-      }))
-      .pipe(dest(config.build.root));
-
-    return merge(normalPages, minifiedPages, normal, minified)
-      .pipe(browserSync.stream());
+  // Gulp 4 может обрабатывать эти потоки параллельно, 
+  // но для гарантии последовательности мы можем просто вернуть merge-stream 
+  // или использовать gulp.parallel/gulp.series
+  
+  return merge(otherPages, indexPage).pipe(browserSync.stream());
 };
-
 
 export const htmlWatch = () => {
     watch(`${config.src.html}/**/*.html`, htmlBuild)

@@ -991,6 +991,128 @@ code, kbd, samp, pre {
   }
 }
 
+.services {
+  padding-top: 19px;
+  padding-bottom: 45px;
+}
+@media (max-width: 576px) {
+  .services {
+    padding-top: 14px;
+  }
+}
+.services a {
+  color: #337AB7;
+}
+.services__title {
+  margin-bottom: 35px;
+  font-size: 20px;
+}
+@media (max-width: 992px) {
+  .services__title {
+    display: none;
+  }
+}
+.services__cards {
+  display: flex;
+  text-align: center;
+  justify-content: space-between;
+  column-gap: 10px;
+}
+@media (max-width: 992px) {
+  .services__cards {
+    flex-wrap: wrap;
+    margin-top: 12px;
+    row-gap: 62px;
+  }
+}
+@media (max-width: 576px) {
+  .services__cards {
+    row-gap: 27px;
+  }
+}
+.services__cards img {
+  margin-bottom: 31px;
+}
+@media (max-width: 992px) {
+  .services__cards img {
+    margin-bottom: 10px;
+    height: 204px;
+  }
+}
+@media (max-width: 576px) {
+  .services__cards img {
+    height: 175px;
+  }
+}
+.services__cards-item {
+  width: 100%;
+  max-width: 332px;
+  margin: 0 auto;
+}
+@media (max-width: 992px) {
+  .services__cards-item {
+    max-width: 339px;
+  }
+}
+@media (max-width: 576px) {
+  .services__cards-item {
+    max-width: 290px;
+  }
+}
+.services__cards-wrap {
+  border: 1px solid #e6e6e6;
+  border-radius: 5px;
+  padding-bottom: 27px;
+  margin-bottom: 20px;
+}
+@media (max-width: 992px) {
+  .services__cards-wrap {
+    margin-bottom: 7px;
+  }
+}
+@media (max-width: 576px) {
+  .services__cards-wrap {
+    margin-bottom: 8px;
+    padding-bottom: 19px;
+  }
+}
+.services__cards-title {
+  font-size: 20px;
+  color: #333;
+  border-bottom: 1px solid #e2e2e2;
+  max-width: 268px;
+  margin: 0 auto 26px;
+  padding-bottom: 18px;
+}
+@media (max-width: 992px) {
+  .services__cards-title {
+    margin-bottom: 22px;
+  }
+}
+@media (max-width: 576px) {
+  .services__cards-title {
+    width: 235px;
+    padding-bottom: 9px;
+    margin-bottom: 17px;
+  }
+}
+.services__cards-desc {
+  font-size: 16px;
+  color: #666;
+  max-width: 250px;
+  margin: 0 auto;
+  line-height: 1.375;
+}
+.services__cards-after {
+  padding: 0 20px;
+}
+@media (max-width: 992px) {
+  .services__cards-after {
+    font-size: 14px;
+    line-height: 1.571;
+  }
+}
+
 .btn {
   padding: 16px 0;
   border: 1px solid #cecece;
@@ -1048,6 +1170,7 @@ h2, h3 {
 @media (max-width: 992px) {
   .container {
     max-width: 992px;
+    padding: 0 15px;
   }
 }
 @media (max-width: 768px) {
@@ -1063,7 +1186,6 @@ h2, h3 {
 @media (max-width: 425px) {
   .container {
     max-width: 425px;
-    padding: 0 15px;
   }
 }
 @media (max-width: 375px) {

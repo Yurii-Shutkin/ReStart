@@ -1266,6 +1266,11 @@ code, kbd, samp, pre {
 .how-to-ride {
   margin-bottom: 98px;
 }
+@media (max-width: 1440px) {
+  .how-to-ride {
+    margin-bottom: 42px;
+  }
+}
 .how-to-ride__title {
   font-size: 20px;
   margin-bottom: 42px;
@@ -1349,9 +1354,28 @@ code, kbd, samp, pre {
   position: relative;
   width: 100%;
   background-image: url("../images/form_bg.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
   display: flex;
   justify-content: space-between;
   padding: 37px 75px 37px 36px;
+  border-radius: 5px;
+  overflow: hidden;
+}
+@media (max-width: 1200px) {
+  .form-area {
+    display: grid;
+    grid-template-columns: 1fr;
+    padding: 41px 0 46px 0;
+    row-gap: 31px;
+  }
+}
+@media (max-width: 576px) {
+  .form-area {
+    padding: 27px 0 36px;
+    row-gap: 24px;
+  }
 }
 .form-area::after {
   position: absolute;
@@ -1373,13 +1397,34 @@ code, kbd, samp, pre {
   margin-top: 102px;
   line-height: 1.38;
 }
+@media (max-width: 1200px) {
+  .form-area__title {
+    font-size: 20px;
+    width: 460px;
+    margin: 0 auto;
+    text-align: center;
+  }
+}
+@media (max-width: 576px) {
+  .form-area__title {
+    width: 264px;
+  }
+}
 .form-area .form {
   position: relative;
   background-color: #fff;
   color: #333;
-  padding: 34px 22px 0 25px;
+  padding: 34px 22px 32px 25px;
+}
+@media (max-width: 1200px) {
+  .form-area .form {
+    padding: 13px 15px 22px 15px;
+    max-width: fit-content;
+    margin: 0 auto;
+  }
+}
+.form-area .form {
   border-radius: 5px;
-  height: 466px;
   z-index: 2;
 }
 .form-area .form-group {
@@ -1387,12 +1432,26 @@ code, kbd, samp, pre {
   margin-left: -5px;
   margin-bottom: 20px;
 }
+@media (max-width: 1200px) {
+  .form-area .form-group {
+    width: 235px;
+    margin-bottom: 10px;
+  }
+}
 .form-area .form-submit {
   color: #fff;
   background-color: #27ae60;
   font-size: 18px;
   padding: 16px 45px;
   text-align: center;
+  text-wrap: wrap;
+  border-radius: 5px;
+}
+@media (max-width: 1200px) {
+  .form-area .form-submit {
+    padding: 8px 32px;
+    max-width: 235px;
+  }
 }
 .form-area .form-error {
   color: #df0918;
@@ -1407,16 +1466,35 @@ code, kbd, samp, pre {
 .form-area .form legend {
   margin-bottom: 25px;
 }
+@media (max-width: 1200px) {
+  .form-area .form legend {
+    max-width: 180px;
+    text-align: center;
+    margin: 0 auto;
+  }
+}
 .form-area .form legend span {
   display: block;
   font-size: 18px;
   border-bottom: 1px solid #ebebeb;
   padding-bottom: 27px;
 }
+@media (max-width: 1200px) {
+  .form-area .form legend span {
+    font-size: 16px;
+    padding-bottom: 15px;
+    margin-bottom: 13px;
+  }
+}
 .form-area .form label {
   display: block;
   font-size: 14px;
   margin-bottom: 6px;
+}
+@media (max-width: 1200px) {
+  .form-area .form label {
+    margin-bottom: 4px;
+  }
 }
 .form-area .form label span {
   color: #df0918;
@@ -1429,6 +1507,17 @@ code, kbd, samp, pre {
   border-radius: 5px;
   padding: 16px 0 16px 12px;
   outline: none;
+}
+@media (max-width: 1200px) {
+  .form-area .form input,
+  .form-area .form select {
+    padding: 14px 0 13px 8px;
+  }
+}
+@media (max-width: 1200px) {
+  .form-area .form select {
+    padding-bottom: 10px;
+  }
 }
 .form-area .form .custom-select-wrapper {
   position: relative;
@@ -1449,6 +1538,14 @@ code, kbd, samp, pre {
   width: 19px;
   height: 21px;
   pointer-events: none;
+}
+@media (max-width: 1200px) {
+  .form-area .form .custom-arrow {
+    top: 52%;
+    right: 10px;
+    width: 14px;
+    height: 15px;
+  }
 }
 .form-area .modal {
   display: none;
@@ -1471,6 +1568,11 @@ code, kbd, samp, pre {
   border-radius: 8px;
   text-align: center;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+@media (max-width: 576px) {
+  .form-area .modal-content {
+    width: 90%;
+  }
 }
 .form-area .modal-success-icon {
   display: block;

@@ -3,6 +3,10 @@
 .how-to-ride {
   margin-bottom: 98px;
 
+  @include respond-to(laptop-l) {
+    margin-bottom: 42px;
+  }
+
   &__title {
     font-size: 20px;
     margin-bottom: 42px;

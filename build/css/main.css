@@ -1263,6 +1263,9 @@ code, kbd, samp, pre {
   }
 }
 
+.how-to-ride {
+  margin-bottom: 98px;
+}
 .how-to-ride__title {
   font-size: 20px;
   margin-bottom: 42px;
@@ -1342,6 +1345,171 @@ code, kbd, samp, pre {
   }
 }
 
+.form-area {
+  position: relative;
+  width: 100%;
+  background-image: url("../images/form_bg.png");
+  display: flex;
+  justify-content: space-between;
+  padding: 37px 75px 37px 36px;
+}
+.form-area::after {
+  position: absolute;
+  content: "";
+  display: block;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.67), rgba(0, 0, 0, 0.56), rgba(0, 0, 0, 0.44), rgba(0, 0, 0, 0.33), rgba(0, 0, 0, 0.23), rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.1));
+}
+.form-area__title {
+  position: relative;
+  color: #fff;
+  font-size: 40px;
+  font-weight: bold;
+  z-index: 2;
+  width: 50%;
+  margin-top: 102px;
+  line-height: 1.38;
+}
+.form-area .form {
+  position: relative;
+  background-color: #fff;
+  color: #333;
+  padding: 34px 22px 0 25px;
+  border-radius: 5px;
+  height: 466px;
+  z-index: 2;
+}
+.form-area .form-group {
+  width: 350px;
+  margin-left: -5px;
+  margin-bottom: 20px;
+}
+.form-area .form-submit {
+  color: #fff;
+  background-color: #27ae60;
+  font-size: 18px;
+  padding: 16px 45px;
+  text-align: center;
+}
+.form-area .form-error {
+  color: #df0918;
+  font-size: 0.8em;
+  display: block;
+  margin-top: 5px;
+}
+.form-area .form .input-error {
+  border-color: #df0918;
+  background-color: #fce8e8;
+}
+.form-area .form legend {
+  margin-bottom: 25px;
+}
+.form-area .form legend span {
+  display: block;
+  font-size: 18px;
+  border-bottom: 1px solid #ebebeb;
+  padding-bottom: 27px;
+}
+.form-area .form label {
+  display: block;
+  font-size: 14px;
+  margin-bottom: 6px;
+}
+.form-area .form label span {
+  color: #df0918;
+}
+.form-area .form input,
+.form-area .form select {
+  width: 100%;
+  font-size: 14px;
+  border: 1px solid #e6e6e6;
+  border-radius: 5px;
+  padding: 16px 0 16px 12px;
+  outline: none;
+}
+.form-area .form .custom-select-wrapper {
+  position: relative;
+  display: block;
+}
+.form-area .form .custom-select {
+  appearance: none;
+  background-repeat: no-repeat;
+  background-position: right 12px center;
+}
+.form-area .form .custom-select::-ms-expand {
+  display: none;
+}
+.form-area .form .custom-arrow {
+  position: absolute;
+  right: 15px;
+  top: 51%;
+  width: 19px;
+  height: 21px;
+  pointer-events: none;
+}
+.form-area .modal {
+  display: none;
+  position: fixed;
+  z-index: 10;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.56);
+  justify-content: center;
+  align-items: center;
+}
+.form-area .modal-content {
+  background-color: #fefefe;
+  padding: 22px 25px;
+  border: 1px solid #888;
+  width: 100%;
+  max-width: 393px;
+  border-radius: 8px;
+  text-align: center;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+.form-area .modal-success-icon {
+  display: block;
+  margin: 53px auto 18px;
+}
+.form-area .modal-title {
+  font-size: 18px;
+  color: #333;
+  margin-bottom: 52px;
+  line-height: 1.333;
+}
+.form-area .modal-desc {
+  display: block;
+  color: #828282;
+  font-size: 16px;
+  line-height: 1.5;
+  border-bottom: 1px solid #e2e2e2;
+  padding-bottom: 15px;
+  margin-bottom: 22px;
+}
+.form-area .modal-socials {
+  display: flex;
+  justify-content: center;
+  gap: 17px;
+}
+.form-area .close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+}
+.form-area .close:hover,
+.form-area .close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
 .btn {
   display: block;
   padding: 16px 0;
@@ -1373,6 +1541,35 @@ body {
   font-weight: 400;
   background-color: #fff;
   color: #666;
+}
+
+body.modal-open {
+  overflow: hidden;
+  padding-right: 15px;
+}
+
+fieldset {
+  border: none;
+  padding: 0;
+  margin: 0;
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: #828282;
+  opacity: 1;
+}
+
+select {
+  color: #828282;
+}
+
+select:valid {
+  color: #333;
+}
+
+select option {
+  color: #333;
 }
 
 h2,

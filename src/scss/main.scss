@@ -15,6 +15,35 @@ body {
   color: map.get(vars.$colors, grey);
 }
 
+body.modal-open {
+  overflow: hidden;
+  padding-right: 15px;
+}
+
+fieldset {
+  border: none;
+  padding: 0;
+  margin: 0;
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: #828282;
+  opacity: 1;
+}
+
+select {
+  color: #828282;
+}
+
+select:valid {
+  color: map.get(vars.$colors, black);
+}
+
+select option {
+  color: map.get(vars.$colors, black);
+}
+
 h2,
 h3 {
   font-size: 20px;

@@ -14,17 +14,20 @@
   padding: 37px 75px 37px 36px;
   border-radius: 5px;
   overflow: hidden;
+  margin-bottom: 88px;
 
   @include respond-to(laptop-m) {
     display: grid;
     grid-template-columns: 1fr;
     padding: 41px 0 46px 0;
     row-gap: 31px;
+    margin-bottom: 53px;
   }
 
   @include respond-to(tablet) {
     padding: 27px 0 36px;
     row-gap: 24px;
+    margin-bottom: 25px;
   }
 
   &::after {

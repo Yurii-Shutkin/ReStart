@@ -1,0 +1,110 @@
+@use "sass:map";
+@use "../../base/vars" as *;
+@use "../../mixins/" as *;
+
+.deep-services {
+  margin-bottom: 34px;
+
+  @include respond-to(laptop-m) {
+    margin-bottom: 47px;
+  }
+  &__title {
+    font-size: 20px;
+    color: map.get($colors, black);
+    margin-bottom: 22px;
+
+    @include respond-to(laptop-m) {
+      display: none;
+    }
+  }
+
+  &__wrap {
+    background-color: #f8f9fa;
+    display: grid;
+    grid-template-columns: 1fr;
+    padding: 38px 12px 0 44px;
+    border-radius: 5px;
+
+    @include respond-to(laptop-m) {
+      padding-left: 15px;
+      padding-top: 22px;
+      border: 1px solid #e6e6e6;
+    }
+
+    @include respond-to(laptop-m) {
+      padding-top: 25px;
+    }
+
+    @include respond-to(laptop-m) {
+      padding-bottom: 6px;
+    }
+  }
+
+  &__link {
+    @include respond-to(laptop-m) {
+      line-height: 1.375;
+    }
+
+    a {
+      color: #337ab7;
+    }
+  }
+
+  &__item {
+    border-bottom: 1px solid #e2e2e2;
+    padding-bottom: 50px;
+    max-width: 1310px;
+    margin-bottom: 45px;
+
+    &:last-child {
+      border-bottom: none;
+    }
+
+    @include respond-to(laptop-m) {
+      padding-bottom: 38px;
+    }
+  }
+
+  .item {
+    &__list {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      gap: 10px;
+      margin-bottom: 22px;
+
+      @include respond-to(laptop-m) {
+        grid-template-columns: 1fr 1fr;
+        margin-bottom: 78px;
+      }
+
+      @include respond-to(tablet) {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    &__title {
+      font-size: 16px;
+      color: map.get($colors, grey);
+      margin-bottom: 19px;
+
+      @include respond-to(laptop-m) {
+        margin-bottom: 7px;
+      }
+    }
+
+    &__unit {
+      font-size: 16px;
+      color: #777;
+    }
+
+    &__flex-wrap {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      align-items: self-start;
+
+      .item__list {
+        grid-template-columns: 1fr;
+      }
+    }
+  }
+}

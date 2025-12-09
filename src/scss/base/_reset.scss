@@ -60,7 +60,8 @@ svg {
   display: block;
   max-width: 100%;
   height: auto;
-  user-select: contain;
+  pointer-events: none;
+  user-select: none;
 }
 
 // 4. Links and interactive elements

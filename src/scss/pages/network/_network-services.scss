@@ -2,7 +2,7 @@
 @use "../../base/vars" as *;
 @use "../../mixins" as *;
 
-.services {
+.network-services {
   padding-top: 19px;
   padding-bottom: 45px;
   margin-bottom: 76px;
@@ -17,7 +17,7 @@
   }
 
   a {
-    color: #337ab7;
+    color: map.get($colors, link-blue);
   }
 
   &__title {
@@ -73,7 +73,7 @@
     }
 
     &-wrap {
-      border: 1px solid #e6e6e6;
+      border: 1px solid map.get($colors, border-black);
       border-radius: 5px;
       padding-bottom: 27px;
       margin-bottom: 20px;
@@ -91,7 +91,7 @@
     &-title {
       font-size: 20px;
       color: map.get($colors, black);
-      border-bottom: 1px solid #e2e2e2;
+      border-bottom: 1px solid map.get($colors, border-black);
       max-width: 268px;
       margin: 0 auto 26px;
       padding-bottom: 18px;

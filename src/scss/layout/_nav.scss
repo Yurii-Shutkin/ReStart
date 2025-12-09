@@ -1,56 +1,59 @@
-@use 'sass:map';
-@use '../base';
-@use '../mixins';
+@use "sass:map";
+@use "../base/vars" as *;
+@use "../mixins";
 
 .nav {
-    position: relative;
-    font-size: 16px;
+  position: relative;
+  font-size: 16px;
+  width: 100%;
+  max-width: 1361px;
+  margin: 0 auto;
+  background-color: map.get($colors, white);
+  border: 1px solid map.get($colors, border-black);
+  border-radius: 5px;
+  top: -37px;
+  z-index: 1;
+
+  &__list {
+    display: flex;
+
+    @include mixins.respond-to(laptop-m) {
+    }
+  }
+
+  &__item {
+    width: 272px;
+    padding: 15px 0;
+    text-align: center;
+
+    &:last-child {
+      .nav__link {
+        border: none;
+      }
+    }
+  }
+
+  &__link {
+    display: block;
+    padding: 15px 0;
+    color: map.get($colors, black);
     width: 100%;
-    max-width: 1361px;
-    margin: 0 auto;
-    background-color: #fff;
-    border: 1px solid #e2e2e2;
-    border-radius: 5px;
-    top: -37px;
-    z-index: 1;
+    border-right: 1px solid map.get($colors, border-black);
 
-    &__list {
-        display: flex;
-
-        @include mixins.respond-to(laptop-m) {
-                
-        }
+    @include mixins.respond-to(laptop-m) {
+      font-size: 15px;
     }
+  }
 
-    &__item {
-        width: 272px;
-        padding: 15px 0;
-        text-align: center;
+  &__link.active {
+    color: map.get($colors, grey);
+  }
 
-        &:last-child {
-                .nav__link {
-                    border: none;
-                }
-        }
+  @include mixins.respond-to(laptop-l) {
+    max-width: 100%;
+  }
 
-    }
-
-    &__link { 
-        display: block;
-        padding: 15px 0;
-        width: 100%;
-        border-right: 1px solid #e2e2e2;
-
-        @include mixins.respond-to(laptop-m) {
-            font-size: 15px;      
-        }
-    }
-
-    @include mixins.respond-to(laptop-l) {
-        max-width: 100%;
-    }
-
-    @include mixins.respond-to(laptop) {
-        display: none;
-    }
+  @include mixins.respond-to(laptop) {
+    display: none;
+  }
 }

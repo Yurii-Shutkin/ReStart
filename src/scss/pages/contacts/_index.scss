@@ -1,3 +1,5 @@
+@use "sass:map";
+@use "../../base/vars" as *;
 @use "../../mixins" as *;
 
 .contacts {
@@ -7,7 +9,7 @@
   align-items: center;
   gap: 65px;
   font-size: 16px;
-  color: #333;
+  color: map.get($colors, black);
   padding: 25px 0 110px 0;
 
   @include respond-to(laptop-l) {
@@ -82,15 +84,15 @@
         display: block;
 
         .c-b {
-          color: #337ab7;
+          color: map.get($colors, link-blue);
         }
 
         .c-g {
-          color: #999999;
+          color: map.get($colors, grey);
         }
 
         .c-v {
-          color: #79509a;
+          color: map.get($colors, violet);
         }
       }
 

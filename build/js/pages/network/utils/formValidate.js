@@ -36,18 +36,20 @@ document.querySelector(".form").addEventListener("submit", function (event) {
     isValid = false;
   }
 
-  const WEBHOOK_URL =
-    "https://webhook.site/8dec687d-c9d1-4b0e-a899-35216fcf55d1";
+  const REQUESTBIN_URL = "https://a038db3388774a076d9eg1paq1hyyyyyb.oast.pro/";
 
   if (isValid) {
     console.log("Валидация успешна. Отправляем данные через Fetch API...");
     const formData = new FormData(this);
 
-    fetch(WEBHOOK_URL, {
+    fetch(REQUESTBIN_URL, {
       method: "POST",
       body: formData,
     })
       .then((response) => {
+        if (!response.ok) {
+          throw new Error("Ошибка сервера: " + response.statusText);
+        }
         if (window.openModal) {
           window.openModal();
         }

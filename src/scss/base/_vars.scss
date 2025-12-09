@@ -1,16 +1,24 @@
 $colors: (
-    grey: #666,
-    black: #333
+  primary: #f8f9fa,
+  white: #fff,
+  grey: #666,
+  black: #333,
+  border-black: #e2e2e2,
+  border-light: #ebebeb,
+  link-blue: #337ab7,
+  violet: #79509a,
+  light-green: #27ae60,
+  red: #df0918,
 );
 
 $breakpoints: (
-    desktop: 1920px,
-    laptop-l: 1440px,
-    laptop-m: 1200px,
-    laptop: 992px,  
-    tablet-l: 768px,  
-    tablet: 576px, 
-    mobile: 425px,
-    mobile-m: 375px,
-    mobile-s: 320px,
+  desktop: 1920px,
+  laptop-l: 1440px,
+  laptop-m: 1200px,
+  laptop: 992px,
+  tablet-l: 768px,
+  tablet: 576px,
+  mobile: 425px,
+  mobile-m: 375px,
+  mobile-s: 320px,
 );

@@ -8,47 +8,47 @@
 </head>
 
   <body>
-    <div class="container"><header class="header">
-  <!-- <div class="container"> -->
-  <div class="header__wrap">
-    <div class="header__logo logo">
-      <a href="/"
-        ><img src="../../images/logo.jpg" alt="logo" class="logo"
-      /></a>
+    <header class="header">
+  <div class="container">
+    <div class="header__wrap">
+      <div class="header__logo logo">
+        <a href="/"
+          ><img src="../../images/logo.jpg" alt="logo" class="logo"
+        /></a>
+      </div>
+      <div class="header__msg">
+        <span>Restart — Ваша зона автокомфорту</span>
+      </div>
+      <div class="burger-menu">
+        <input id="menu__toggle" type="checkbox" />
+        <label class="burger" for="menu__toggle">
+          <span></span>
+        </label>
+        <nav class="burger__bar">
+          <ul>
+            <li class="burger__bar-item">
+              <a href="/about">Про компанію</a>
+            </li>
+            <li class="burger__bar-item">
+              <a href="/network">Мережа СТЦ</a>
+            </li>
+            <li class="burger__bar-item">
+              <a href="#">Інтернет-магазин</a>
+            </li>
+            <li class="burger__bar-item">
+              <a href="/solutions">Готові рішення для СТО</a>
+            </li>
+            <li class="burger__bar-item">
+              <a href="/contacts">Контакти</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
     </div>
-    <div class="header__msg">
+    <div class="header__msg header__msg--mobile">
       <span>Restart — Ваша зона автокомфорту</span>
     </div>
-    <div class="burger-menu">
-      <input id="menu__toggle" type="checkbox" />
-      <label class="burger" for="menu__toggle">
-        <span></span>
-      </label>
-      <nav class="burger__bar">
-        <ul>
-          <li class="burger__bar-item">
-            <a href="/about">Про компанію</a>
-          </li>
-          <li class="burger__bar-item">
-            <a href="/network">Мережа СТЦ</a>
-          </li>
-          <li class="burger__bar-item">
-            <a href="#">Інтернет-магазин</a>
-          </li>
-          <li class="burger__bar-item">
-            <a href="/solutions">Готові рішення для СТО</a>
-          </li>
-          <li class="burger__bar-item">
-            <a href="/contacts">Контакти</a>
-          </li>
-        </ul>
-      </nav>
-    </div>
-  </div>
-  <div class="header__msg header__msg--mobile">
-    <span>Restart — Ваша зона автокомфорту</span>
-  </div>
-  <nav class="nav">
+    <nav class="nav">
   <ul class="nav__list">
     <li class="nav__item">
       <a href="/about" class="nav__link">Про компанію</a>
@@ -57,7 +57,7 @@
       <a href="/network" class="nav__link">Мережа СТЦ</a>
     </li>
     <li class="nav__item">
-      <a href="#" class="nav__link">Інтернет-магазин</a>
+      <a href="/store" class="nav__link">Інтернет-магазин</a>
     </li>
     <li class="nav__item">
       <a href="/solutions" class="nav__link">Готові рішення для СТО</a>
@@ -68,10 +68,10 @@
   </ul>
 </nav>
 
-  <!-- </div> -->
+  </div>
+  <script type="module" src="../js/navTabs.js"></script>
 </header>
-</div>
-    <section class="contacts">
+ <section class="contacts">
   <div class="container">
     <div class="contacts__info">
       <h3 class="contacts__info-title">Контактна інформація</h3>
@@ -123,7 +123,8 @@
     ></iframe>
   </div>
 </section>
- <footer class="footer">
+
+    <footer class="footer">
   <nav class="nav">
   <ul class="nav__list">
     <li class="nav__item">
@@ -133,7 +134,7 @@
       <a href="/network" class="nav__link">Мережа СТЦ</a>
     </li>
     <li class="nav__item">
-      <a href="#" class="nav__link">Інтернет-магазин</a>
+      <a href="/store" class="nav__link">Інтернет-магазин</a>
     </li>
     <li class="nav__item">
       <a href="/solutions" class="nav__link">Готові рішення для СТО</a>
@@ -162,6 +163,5 @@
   </div>
 </footer>
 
-    <script type="module" src="../js/app.min.js"></script>
   </body>
 </html>

@@ -67,8 +67,8 @@
     }
 
     .adress {
-      background-color: #fff;
-      border: 1px solid #e6e6e6;
+      background-color: map.get($colors, white);
+      border: 1px solid map.get($colors, border-black);
       border-radius: 5px;
       font-size: 18px;
 
@@ -90,7 +90,7 @@
         justify-content: space-between;
         align-items: center;
         padding: 27px 26px 22px 17px;
-        border-bottom: 1px solid #ebebeb;
+        border-bottom: 1px solid map.get($colors, border-light);
 
         &:last-child {
           border: none;

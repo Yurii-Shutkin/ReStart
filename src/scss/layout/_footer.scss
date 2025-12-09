@@ -1,9 +1,15 @@
+@use "sass:map";
+@use "../base/vars" as *;
 @use "../base";
 @use "../mixins" as *;
 
 .footer {
-  background-color: #fff;
+  background-color: map.get($colors, white);
   padding: 0 40px 32px;
+
+  @include respond-to(tablet-l) {
+    padding: 0 30px 14px;
+  }
 
   @include respond-to(tablet) {
     padding: 0 15px 14px;

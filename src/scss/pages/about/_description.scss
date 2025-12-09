@@ -1,107 +1,106 @@
-@use 'sass:map';
-@use '../../base/vars' as *;
-@use '../../mixins' as *;
-
+@use "sass:map";
+@use "../../base/vars" as *;
+@use "../../mixins" as *;
 
 .description {
-    max-width: 1280px;
-    margin: 0 auto;
-    color: map.get($colors, grey);
-    background-color: #fff;
-    margin-bottom: 108px;
+  max-width: 1280px;
+  margin: 0 auto;
+  color: map.get($colors, grey);
+  background-color: map.get($colors, white);
+  margin-bottom: 108px;
+
+  @include respond-to(tablet-l) {
+    padding-top: 35px;
+    margin-bottom: 78px;
+  }
+
+  @include respond-to(tablet) {
+    padding: 25px 15px 0 15px;
+    margin-bottom: 49px;
+  }
+
+  &__title {
+    text-align: center;
+    color: map.get($colors, black);
+    background-color: map.get($colors, primary);
+    padding: 24px 0;
+    margin-bottom: 37px;
 
     @include respond-to(tablet-l) {
-        padding-top: 35px;
-        margin-bottom: 78px;
+      font-size: 16px;
+      line-height: 1.375;
     }
 
     @include respond-to(tablet) {
-        padding: 25px 15px 0 15px;
-        margin-bottom: 49px;
+      line-height: 1.5;
+      margin-bottom: 29px;
+    }
+  }
+
+  &__desc {
+    text-align: center;
+    line-height: 1.835;
+    margin-bottom: 26px;
+
+    p {
+      @include respond-to(tablet-l) {
+        display: inline;
+      }
     }
 
+    @include respond-to(tablet-l) {
+      line-height: 1.5;
+      margin-bottom: 31px;
+    }
+
+    @include respond-to(tablet) {
+      line-height: 1.375;
+      margin-bottom: 30px;
+    }
+  }
+
+  &__banner {
+    margin-bottom: 36px;
+
+    img {
+      margin: 0 auto;
+
+      @include respond-to(tablet) {
+        height: 76px;
+      }
+    }
+
+    @include respond-to(tablet) {
+      margin-bottom: 22px;
+    }
+  }
+
+  .info {
     &__title {
-        text-align: center;
-        color: map.get($colors, black);
-        background-color: #F8F9FA;
-        padding: 24px 0;
-        margin-bottom: 37px;
+      color: map.get($colors, black);
+      font-size: 20px;
+      margin-bottom: 21px;
 
-        @include respond-to(tablet-l) {
-            font-size: 16px;
-            line-height: 1.375;
-        }
+      @include respond-to(tablet-l) {
+        font-size: 16px;
+        margin-bottom: 15px;
+      }
 
-        @include respond-to(tablet) {
-            line-height: 1.5;    
-            margin-bottom: 29px;
-        }
+      @include respond-to(tablet) {
+        line-height: 1.5;
+        margin-bottom: 22px;
+      }
     }
 
-    &__desc {
-        text-align: center;
-        line-height: 1.835;
-        margin-bottom: 26px;
+    &__list {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
 
-        p {
-            @include respond-to(tablet-l) {
-                display: inline;
-            }
-        }
-
-        @include respond-to(tablet-l) {
-            line-height: 1.5;
-            margin-bottom: 31px;
-        }
-
-        @include respond-to(tablet) {
-            line-height: 1.375;
-            margin-bottom: 30px;
-        }
+      @include respond-to(tablet) {
+        line-height: 1.75;
+        gap: 0;
+      }
     }
-
-    &__banner {
-        margin-bottom: 36px;
-
-        img {
-            margin: 0 auto;
-
-            @include respond-to(tablet) {
-                height: 76px;
-            }
-        }
-
-        @include respond-to(tablet) {
-            margin-bottom: 22px;
-        }
-    }
-
-    .info {
-        &__title {
-            color: map.get($colors, black);
-            font-size: 20px;
-            margin-bottom: 21px;
-
-            @include respond-to(tablet-l) {
-                font-size: 16px;
-                margin-bottom: 15px;
-            }
-
-            @include respond-to(tablet) {
-                line-height: 1.5;
-                margin-bottom: 22px;
-            }
-        }
-
-        &__list {
-            display: flex;
-            flex-direction: column;
-            gap: 10px;
-
-            @include respond-to(tablet) {
-                line-height: 1.75;
-                gap: 0;
-            }
-        }
-    }
+  }
 }

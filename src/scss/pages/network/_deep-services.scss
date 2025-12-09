@@ -28,7 +28,7 @@
     @include respond-to(laptop-m) {
       padding-left: 15px;
       padding-top: 22px;
-      border: 1px solid #e6e6e6;
+      border: 1px solid map.get($colors, border-light);
     }
 
     @include respond-to(laptop-m) {
@@ -51,7 +51,7 @@
   }
 
   &__item {
-    border-bottom: 1px solid #e2e2e2;
+    border-bottom: 1px solid map.get($colors, border-black);
     padding-bottom: 50px;
     max-width: 1310px;
     margin-bottom: 45px;
@@ -94,7 +94,7 @@
 
     &__unit {
       font-size: 16px;
-      color: #777;
+      color: map.get($colors, grey);
     }
 
     &__flex-wrap {

@@ -11,10 +11,6 @@
   align-items: center;
   margin: 0 auto;
   height: 866px;
-  // background-image: url('../images/main_bg.png');
-  // background-position: center;
-  // background-repeat: no-repeat;
-  // background-size: cover;
   z-index: 0;
 
   @include respond-to(laptop) {
@@ -25,7 +21,7 @@
   }
 
   @include respond-to(mobile) {
-    margin-bottom: 43px;
+    margin-bottom: 48px;
   }
 
   .compare {
@@ -34,6 +30,21 @@
       width: 100%;
       max-width: 1920px;
       overflow: hidden;
+
+      @include respond-to(laptop) {
+        height: 222px;
+      }
+
+      @include respond-to(tablet-l) {
+        position: static;
+        height: 100%;
+      }
+
+      &__wrap {
+        @include respond-to(laptop) {
+          display: none;
+        }
+      }
 
       .after {
         position: absolute;
@@ -88,15 +99,17 @@
       flex-wrap: wrap;
     }
 
-    @include respond-to(mobile) {
+    @include respond-to(tablet-l) {
       padding: 0 15px;
       gap: 10px;
+      position: static;
+      transform: translate(0);
     }
 
     .card {
       max-width: 280px;
-      background-color: #fff;
-      padding: 32px 30px 37px;
+      background-color: map.get($colors, white);
+      padding: 51px 40px 17px 54px;
 
       @include respond-to(laptop) {
         max-width: 325px;
@@ -106,7 +119,7 @@
 
       @include respond-to(mobile) {
         max-width: 100%;
-        padding: 32px 35px 37px 34px;
+        padding: 39px 35px 37px 34px;
       }
 
       &__wrap {
@@ -117,7 +130,7 @@
         }
 
         @include respond-to(mobile) {
-          margin-bottom: 16px;
+          margin-bottom: 9px;
         }
       }
 
@@ -148,27 +161,18 @@
         }
       }
 
-      // &__link {
-      //     padding: 18px 36px;
-      //     border: 1px solid #cecece;
-      //     border-radius: 100px;
-      //     text-align: center;
-      //     cursor: pointer;
+      &__link {
+        padding: 16px 28px;
 
-      //     &:hover {
-      //         background-color: map.get($colors, black);
-      //         color: #fff;
-      //     }
+        @include respond-to(laptop) {
+          padding: 19px 52px;
+        }
 
-      //     &:active {
-      //         border: 3px solid #cecece;
-      //         padding: 13px 36px;
-      //     }
-
-      //     @include respond-to(mobile) {
-      //         padding: 16px 30px;
-      //     }
-      // }
+        @include respond-to(mobile) {
+          padding: 16px 36px;
+          margin: 0 auto;
+        }
+      }
     }
   }
 }

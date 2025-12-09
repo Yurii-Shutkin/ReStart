@@ -3,16 +3,15 @@ import config from "../config.js";
 
 browserSync.create();
 
-const server = done => {
+const server = (done) => {
   browserSync.init({
-    server: config.build.root, // хост по заданному каталогу
-    port: config.server.port, // использовать заданный порт
+    server: config.build.root,
+    port: config.server.port,
+    open: true,
+    notify: false,
+  });
 
-    open: true, // автоматически открыть страницу в браузере после запуска таска
-    notify: false, // показать уведомление
-  })
-
-  done()
-}
+  done();
+};
 
 export default server;

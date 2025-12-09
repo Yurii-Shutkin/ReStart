@@ -8,48 +8,47 @@
 </head>
 
   <body>
-    <div class="container">
-      <header class="header">
-  <!-- <div class="container"> -->
-  <div class="header__wrap">
-    <div class="header__logo logo">
-      <a href="/"
-        ><img src="../../images/logo.jpg" alt="logo" class="logo"
-      /></a>
+    <header class="header">
+  <div class="container">
+    <div class="header__wrap">
+      <div class="header__logo logo">
+        <a href="/"
+          ><img src="../../images/logo.jpg" alt="logo" class="logo"
+        /></a>
+      </div>
+      <div class="header__msg">
+        <span>Restart — Ваша зона автокомфорту</span>
+      </div>
+      <div class="burger-menu">
+        <input id="menu__toggle" type="checkbox" />
+        <label class="burger" for="menu__toggle">
+          <span></span>
+        </label>
+        <nav class="burger__bar">
+          <ul>
+            <li class="burger__bar-item">
+              <a href="/about">Про компанію</a>
+            </li>
+            <li class="burger__bar-item">
+              <a href="/network">Мережа СТЦ</a>
+            </li>
+            <li class="burger__bar-item">
+              <a href="#">Інтернет-магазин</a>
+            </li>
+            <li class="burger__bar-item">
+              <a href="/solutions">Готові рішення для СТО</a>
+            </li>
+            <li class="burger__bar-item">
+              <a href="/contacts">Контакти</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
     </div>
-    <div class="header__msg">
+    <div class="header__msg header__msg--mobile">
       <span>Restart — Ваша зона автокомфорту</span>
     </div>
-    <div class="burger-menu">
-      <input id="menu__toggle" type="checkbox" />
-      <label class="burger" for="menu__toggle">
-        <span></span>
-      </label>
-      <nav class="burger__bar">
-        <ul>
-          <li class="burger__bar-item">
-            <a href="/about">Про компанію</a>
-          </li>
-          <li class="burger__bar-item">
-            <a href="/network">Мережа СТЦ</a>
-          </li>
-          <li class="burger__bar-item">
-            <a href="#">Інтернет-магазин</a>
-          </li>
-          <li class="burger__bar-item">
-            <a href="/solutions">Готові рішення для СТО</a>
-          </li>
-          <li class="burger__bar-item">
-            <a href="/contacts">Контакти</a>
-          </li>
-        </ul>
-      </nav>
-    </div>
-  </div>
-  <div class="header__msg header__msg--mobile">
-    <span>Restart — Ваша зона автокомфорту</span>
-  </div>
-  <nav class="nav">
+    <nav class="nav">
   <ul class="nav__list">
     <li class="nav__item">
       <a href="/about" class="nav__link">Про компанію</a>
@@ -58,7 +57,7 @@
       <a href="/network" class="nav__link">Мережа СТЦ</a>
     </li>
     <li class="nav__item">
-      <a href="#" class="nav__link">Інтернет-магазин</a>
+      <a href="/store" class="nav__link">Інтернет-магазин</a>
     </li>
     <li class="nav__item">
       <a href="/solutions" class="nav__link">Готові рішення для СТО</a>
@@ -69,76 +68,67 @@
   </ul>
 </nav>
 
-  <!-- </div> -->
+  </div>
+  <script type="module" src="../js/navTabs.js"></script>
 </header>
 
-      <section class="services">
-    <h2 class="services__title">
-        Мережа СЦТ Restart (Рестарт) надає наступні послуги
-    </h2>
-    <div class="services__cards">
-        <div class="services__cards-item">
-            <div class="services__cards-wrap">
-                <img src="../images/starters.png" alt="starters">
-            <p class="services__cards-title">
-                Стартери
-            </p>
-            <div class="services__cards-desc">
-                Діагностика, ремонт,
-заміна, продаж. <a href="/">Усі послуги</a>
-            </div>
-            </div>
-            <div class="services__cards-after">
-                Підібрати генератор, деталі генератора
-    можна в <a href="#">інтернет-магазині</a>
-            </div>
+    <div class="container">
+      <section class="network-services">
+  <h2 class="network-services__title">
+    Мережа СЦТ Restart (Рестарт) надає наступні послуги
+  </h2>
+  <div class="network-services__cards">
+    <div class="network-services__cards-item">
+      <div class="network-services__cards-wrap">
+        <img src="../images/starters.png" alt="starters" />
+        <p class="network-services__cards-title">Стартери</p>
+        <div class="network-services__cards-desc">
+          Діагностика, ремонт, заміна, продаж. <a href="/">Усі послуги</a>
         </div>
-        <div class="services__cards-item">
-            <div class="services__cards-wrap">
-                <img src="../images/generators.png" alt="starters">
-            <p class="services__cards-title">
-                Генератори
-            </p>
-            <div class="services__cards-desc">
-                Діагностика, ремонт,
-заміна, продаж. <a href="/">Усі послуги</a>
-            </div>
-            </div>
-            <div class="services__cards-after">
-                Підібрати генератор, деталі генератора
-    можна в <a href="#">інтернет-магазині</a>
-            </div>
-        </div>
-        <div class="services__cards-item">
-            <div class="services__cards-wrap">
-                <img src="../images/conditions.png" alt="starters">
-            <p class="services__cards-title">
-                Кондиціонери
-            </p>
-            <div class="services__cards-desc">
-                Діагностика, ремонт,
-заправка, дозаправка.<a href="/">Усі послуги</a>
-            </div>
-            </div>
-            <div class="services__cards-after">
-                Підібрати запчастини до системи
-кондиціонування можна в <a href="#">інтернет-магазині</a>
-            </div>
-        </div>
-        <div class="services__cards-item">
-            <div class="services__cards-wrap">
-                <img src="../images/accum.png" alt="starters">
-            <p class="services__cards-title">
-                Акумулятори
-            </p>
-            <div class="services__cards-desc">
-                Діагностика,
-заряд та продаж.
-            </div>
-            </div>
-        </div>
+      </div>
+      <div class="network-services__cards-after">
+        Підібрати генератор, деталі генератора можна в
+        <a href="#">інтернет-магазині</a>
+      </div>
     </div>
-</section> <section class="location">
+    <div class="network-services__cards-item">
+      <div class="network-services__cards-wrap">
+        <img src="../images/generators.png" alt="starters" />
+        <p class="network-services__cards-title">Генератори</p>
+        <div class="network-services__cards-desc">
+          Діагностика, ремонт, заміна, продаж. <a href="/">Усі послуги</a>
+        </div>
+      </div>
+      <div class="network-services__cards-after">
+        Підібрати генератор, деталі генератора можна в
+        <a href="#">інтернет-магазині</a>
+      </div>
+    </div>
+    <div class="network-services__cards-item">
+      <div class="network-services__cards-wrap">
+        <img src="../images/conditions.png" alt="starters" />
+        <p class="network-services__cards-title">Кондиціонери</p>
+        <div class="network-services__cards-desc">
+          Діагностика, ремонт, заправка, дозаправка.<a href="/">Усі послуги</a>
+        </div>
+      </div>
+      <div class="network-services__cards-after">
+        Підібрати запчастини до системи кондиціонування можна в
+        <a href="#">інтернет-магазині</a>
+      </div>
+    </div>
+    <div class="network-services__cards-item">
+      <div class="network-services__cards-wrap">
+        <img src="../images/accum.png" alt="starters" />
+        <p class="network-services__cards-title">Акумулятори</p>
+        <div class="network-services__cards-desc">
+          Діагностика, заряд та продаж.
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+ <section class="location">
   <h2 class="location__title">
     Сьогодні в Компанії є 7 діючих сервісно-технічних центрів
   </h2>
@@ -296,7 +286,7 @@
     Заповніть форму для консультації або запису на діагностику/ремонт
   </h2>
   <form
-    action="https://webhook.site/8dec687d-c9d1-4b0e-a899-35216fcf55d1"
+    action="https://a038db3388774a076d9eg1paq1hyyyyyb.oast.pro"
     method="POST"
     class="form"
   >
@@ -491,7 +481,7 @@
       <a href="/network" class="nav__link">Мережа СТЦ</a>
     </li>
     <li class="nav__item">
-      <a href="#" class="nav__link">Інтернет-магазин</a>
+      <a href="/store" class="nav__link">Інтернет-магазин</a>
     </li>
     <li class="nav__item">
       <a href="/solutions" class="nav__link">Готові рішення для СТО</a>
@@ -520,6 +510,6 @@
   </div>
 </footer>
 
-    <script type="module" src="../js/app.min.js"></script>
+    <script type="module" src="../js/pages/network/main.js"></script>
   </body>
 </html>

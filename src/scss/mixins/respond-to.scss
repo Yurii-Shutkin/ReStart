@@ -1,9 +1,0 @@
-@use 'sass:map';
-@use '../base/vars';
-
-@mixin respond-to($breakpoint) {
-    $breakpoint-value: map.get(vars.$breakpoints, $breakpoint);
-    @media(max-width: $breakpoint-value) {
-        @content
-    };
-}

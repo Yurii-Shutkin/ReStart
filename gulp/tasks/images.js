@@ -12,12 +12,12 @@ const imageOptim = () => {
   return src(`${config.src.assets.images}/**/*.{png,jpg,jpeg}`, {
     encoding: false,
   })
-    // .pipe(
-    //   imagemin([
-    //     imageminMozjpeg({ quality: 75, progressive: true }),
-    //     imageminOptipng({ optimizationLevel: 5 }),
-    //   ])
-    // )
+    .pipe(
+      imagemin([
+        imageminMozjpeg({ quality: 75, progressive: true }),
+        imageminOptipng({ optimizationLevel: 5 }),
+      ])
+    )
     .pipe(dest(config.build.images))
     .pipe(browserSync.stream());
 };

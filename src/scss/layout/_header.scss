@@ -108,6 +108,22 @@
       }
     }
 
+    &__overlay {
+      content: '';
+      position: absolute;
+      display: none;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      background-color: #000;
+      opacity: .7;
+    }
+
+    &__overlay.active {
+      display: block;
+    }
+
     &::before,
     &::after {
       position: absolute;

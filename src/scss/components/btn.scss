@@ -20,7 +20,9 @@
 
   &:active {
     border: 3px solid #cecece;
-    padding: 13px 36px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+
   }
 
   @include respond-to(mobile) {

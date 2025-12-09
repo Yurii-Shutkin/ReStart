@@ -245,6 +245,20 @@ pre {
     display: block;
   }
 }
+.header .burger__overlay {
+  content: "";
+  position: absolute;
+  display: none;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: #000;
+  opacity: 0.7;
+}
+.header .burger__overlay.active {
+  display: block;
+}
 .header .burger::before, .header .burger::after {
   position: absolute;
   content: "";
@@ -2073,7 +2087,8 @@ pre {
 }
 .btn:active {
   border: 3px solid #cecece;
-  padding: 13px 36px;
+  padding-top: 15px;
+  padding-bottom: 15px;
 }
 @media (max-width: 425px) {
   .btn {
